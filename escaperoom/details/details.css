@@ -1,0 +1,167 @@
+/* details.css (Halloween / dark details pages)
+   Put your detail photos here:
+   C:\xampp\htdocs\hotel\details\
+*/
+
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#f2f2f2;
+  background: radial-gradient(circle at top, #1b1222 0%, #0b0b0f 65%, #07070a 100%);
+}
+
+.page{
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 20px 0 40px;
+}
+
+.topbar{
+  background: linear-gradient(180deg, rgba(18,9,21,0.95) 0%, rgba(12,10,16,0.95) 100%);
+  padding:18px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 106, 0, 0.22);
+  box-shadow: 0 18px 28px rgba(0,0,0,0.55);
+}
+
+.topbar h1{ margin:0 0 6px 0; letter-spacing:.5px; }
+.topbar p{ margin:0; opacity:.9; }
+
+.box{
+  margin-top: 18px;
+  background: rgba(20, 18, 28, 0.90);
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid rgba(255, 106, 0, 0.14);
+  box-shadow: 0 16px 26px rgba(0,0,0,0.45);
+}
+
+.back{
+  display:inline-block;
+  margin-bottom: 10px;
+  text-decoration:none;
+  color:#f2f2f2;
+  opacity: 0.85;
+}
+.back:hover{ opacity: 1; }
+
+.title-row{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.badge{
+  display:inline-block;
+  background: rgba(255, 106, 0, 0.14);
+  border: 1px solid rgba(255, 106, 0, 0.35);
+  color: #ffd4a6;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  box-shadow: 0 0 18px rgba(255, 106, 0, 0.14);
+}
+
+.details-row{
+  display:grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 16px;
+  margin-top: 14px;
+}
+@media (max-width: 850px){
+  .details-row{ grid-template-columns: 1fr; }
+}
+
+.details-img{
+  width:100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 14px 24px rgba(0,0,0,0.45);
+}
+
+.card{
+  background: rgba(0,0,0,0.22);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+h2{ margin:0; color:#ffe2c2; }
+h3{ margin: 12px 0 8px; color:#ffe2c2; }
+
+p{ margin: 8px 0; line-height: 1.5; color:#e9e9e9; }
+
+.list{
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+.list li{ margin: 6px 0; }
+
+.quick-info{
+  margin-top: 12px;
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.quick-info th{
+  text-align:left;
+  padding: 10px;
+  background: rgba(255, 106, 0, 0.10);
+  color:#ffe2c2;
+  width: 45%;
+  border-bottom: 1px solid rgba(255, 106, 0, 0.18);
+}
+
+.quick-info td{
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color:#f2f2f2;
+}
+
+.actions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.btn-primary{
+  display:inline-block;
+  padding: 12px 14px;
+  background: #ff6a00;
+  color:#140b10;
+  text-decoration:none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 0 18px rgba(255, 106, 0, 0.18);
+}
+.btn-primary:hover{ opacity: .92; }
+
+.btn-secondary{
+  display:inline-block;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.08);
+  color:#f2f2f2;
+  text-decoration:none;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.btn-secondary:hover{ background: rgba(255,255,255,0.12); }
+
+.footer{
+  margin-top: 16px;
+  text-align:center;
+  opacity: 0.9;
+  color: #cfcfcf;
+  padding: 12px 10px;
+  border-radius: 12px;
+  background: rgba(10,10,14,0.70);
+  border: 1px solid rgba(255, 106, 0, 0.14);
+}

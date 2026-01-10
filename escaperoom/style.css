@@ -1,0 +1,256 @@
+/* style.css
+   Background image location:
+   C:\xampp\htdocs\hotel\images\bg.png
+*/
+
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#f2f2f2;
+
+  /* Local background photo (relative path from style.css) */
+  background: url("images/bg.png") center/cover no-repeat fixed;
+
+  position: relative;
+}
+
+/* Dark overlay so text stays readable */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45); 
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Content above overlay */
+.page{
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 20px 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.topbar{
+  background: linear-gradient(180deg, rgba(18,9,21,0.92) 0%, rgba(12,10,16,0.92) 100%);
+  color:#fff;
+  padding:18px 16px;
+  border-radius: 14px;
+  box-shadow: 0 18px 28px rgba(0,0,0,0.55);
+  border: 1px solid rgba(255, 106, 0, 0.22);
+}
+
+.topbar-inner{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 14px;
+}
+
+.topbar-left h1{
+  margin:0 0 6px 0;
+  letter-spacing: .5px;
+}
+
+.topbar-left p{
+  margin:0;
+  opacity:0.9;
+}
+
+.halloween-badge{
+  white-space: nowrap;
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255, 106, 0, 0.14);
+  border: 1px solid rgba(255, 106, 0, 0.40);
+  color: #ffd4a6;
+  box-shadow: 0 0 18px rgba(255, 106, 0, 0.18);
+}
+
+.box{
+  margin-top: 18px;
+   background: rgba(20, 18, 28, 0.72); /* was 0.88 */
+  border-radius: 14px;
+  padding: 22px; /* bigger */
+  box-shadow: 0 16px 26px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255, 106, 0, 0.14);
+}
+
+.box h2{
+  margin-top:0;
+  color:#ffe2c2;
+}
+
+.rooms-table{
+  width:100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,106,0,0.45);
+}
+
+.rooms-table th{
+  background: rgba(255,106,0,0.30);
+  color: #ffe2c2;
+  text-align:left;
+  padding: 16px 16px;  /* bigger */
+  font-size: 16px;     /* bigger */
+  border-bottom: 1px solid rgba(226, 103, 16, 0.97);
+}
+
+.rooms-table td{
+  padding: 16px 16px;  /* bigger */
+  background: rgba(0,0,0,0.55);
+  color: #ffffff;
+  font-size: 16px;     /* bigger */
+}
+
+.rooms-table tr:nth-child(even) td{
+  background: rgba(0,0,0,0.68);
+}
+.rooms-table tr:hover td{
+ background: rgba(255,106,0,0.20);
+}
+
+.btn{
+  display:inline-block;
+  padding: 10px 12px;
+  background: #ff6a00;
+  color:#140b10;
+  text-decoration:none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 0 18px rgba(255, 106, 0, 0.18);
+}
+
+.btn:hover{
+  opacity: 0.92;
+}
+
+.note{
+  margin-top: 12px;
+  font-size: 13px;
+  opacity: 0.95;
+  color: #d7d7d7;
+}
+
+.note strong{ color:#ffe2c2; }
+
+.footer{
+  margin-top: 16px;
+  text-align:center;
+  opacity: 0.9;
+  color: #cfcfcf;
+  padding: 12px 10px;
+  border-radius: 12px;
+  background: rgba(10,10,14,0.70);
+  border: 1px solid rgba(255, 106, 0, 0.14);
+}
+.room-img{
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  display: block;
+}
+.back{
+  display:inline-block;
+  margin-bottom: 10px;
+  text-decoration:none;
+  color:#f2f2f2;
+  opacity: 0.85;
+}
+.btn2:hover{ opacity: 0.92; }
+
+.badge{
+  display:inline-block;
+  background: rgba(255, 106, 0, 0.14);
+  border: 1px solid rgba(255, 106, 0, 0.35);
+  color: #ffd4a6;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.details-row{
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.details-img{
+  width: 260px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.list{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.form-table{
+  width:100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.form-table th{
+  background: rgba(255, 106, 0, 0.12);
+  color: #ffe2c2;
+  text-align:left;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.form-table td{
+  padding: 12px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  font-size: 14px;
+}
+
+input, select{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(0,0,0,0.25);
+  color: #f2f2f2;
+}
+
+.btn2{
+  width: 100%;
+  padding: 10px 12px;
+  background: #ff6a00;
+  color:#140b10;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+.room-img{
+  width: 110px;
+  height: 74px;
+}
+
+.btn{
+  padding: 12px 16px;
+  font-size: 14px;
+  border-radius: 12px;
+}
