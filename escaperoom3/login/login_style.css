@@ -1,0 +1,103 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7ff, #eef2ff);
+  color: #111827;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Form "card" */
+form {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+  width: min(420px, 92vw);
+}
+
+/* Table cleanup */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+tr:last-child th,
+tr:last-child td {
+  border-bottom: none;
+}
+
+th {
+  width: 35%;
+  text-align: left;
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18);
+}
+
+/* Submit row */
+tr:last-child td {
+  padding: 14px;
+  background: #ffffff;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 15px;
+  transition: transform 0.05s ease, background 0.15s ease;
+}
+
+input[type="submit"]:hover {
+  background: #4338ca;
+}
+
+input[type="submit"]:active {
+  transform: translateY(1px);
+}

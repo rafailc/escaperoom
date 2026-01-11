@@ -1,0 +1,148 @@
+/* --- Base --- */
+* { box-sizing: border-box; }
+
+body{
+  margin: 0;
+  padding: 24px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f6f7fb;
+  color: #111827;
+}
+
+/* --- Table wrapper (for small screens) --- */
+.table-wrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.06);
+  overflow: hidden; /* rounds the table edges */
+}
+
+/* If the table is wider than the screen, allow horizontal scroll */
+.table-scroll{
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* --- Table --- */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px; /* helps keep columns readable; scrolls on mobile */
+}
+.topbar{
+  max-width: 1100px;
+  margin: 18px auto 10px;
+  padding: 0 16px;
+}
+
+.back{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 14px;
+  border-radius: 10px;
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14.5px;
+  line-height: 1;
+
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+.back:hover{
+  background: #f7f7f7;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+}
+
+.back:active{
+  transform: translateY(0);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.back:focus-visible{
+  outline: 3px solid rgba(0,120,255,0.35);
+  outline-offset: 2px;
+}
+
+.back-icon{
+  font-size: 18px;
+}
+
+thead th{
+  position: sticky;
+  top: 0;                 /* sticky header */
+  background: #111827;    /* dark header */
+  color: #ffffff;
+  text-align: left;
+  font-weight: 600;
+  padding: 14px 12px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  border-bottom: 1px solid #0b1220;
+}
+
+tbody td{
+  padding: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+  color: #111827;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even){
+  background: #f9fafb;
+}
+
+/* Hover highlight */
+tbody tr:hover{
+  background: #eef2ff;
+}
+
+/* Make long text not explode the layout */
+td, th{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 220px;
+}
+
+/* Optional: make date/time/phone align nicer */
+td:nth-child(6),
+td:nth-child(7),
+td:nth-child(9){
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Small screens tweaks --- */
+@media (max-width: 600px){
+  body{ padding: 14px; }
+  thead th, tbody td{ padding: 10px; }
+}
+body{
+  margin: 0;
+  padding: 24px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #e5e7eb;
+
+  background:
+    radial-gradient(900px 500px at 10% 10%, rgba(99,102,241,0.25), transparent 60%),
+    radial-gradient(900px 500px at 90% 20%, rgba(16,185,129,0.18), transparent 55%),
+    linear-gradient(180deg, #0b1220 0%, #0f172a 55%, #111827 100%);
+}
+
+/* Make the card/table readable on dark bg */
+.table-wrap{
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+}
