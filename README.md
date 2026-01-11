@@ -6,3 +6,7 @@
 3) Πηγαίνετε στην "Εισαγωγη" και μετα  στο "Αρχείο για εισαγωγή"->"choose  file"  και βαλτε το "profile.sql" που βρισκετε στο "C:\xampp\htdocs\escaperoom2"  και μετά "εισαγωγη",
 θα πρεπει να έχει φτιαχτει το database με ονομα "profiles" και μεσα τα tables "reservations" και "users" και "rooms".
 4) τελος πηγαιντε στο "http://localhost/escaperoom2/home.html" για να δειτε την εφαρμογη.
+
+--
+- το booking δουλευει μονο αν εχετε κανει login
+- τα rooms μπαινουν στο database στο table "rooms" αλλα οι φωτογραφιες πρεπει να αποθηκευοντε στο φακελο"images" και στο column "photos" να αποθηκευτουν τα ονοματα των φωτογραφιων ως"name.png"
