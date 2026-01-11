@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Βάση δεδομένων: `profile`
 --
-
+CREATE DATABASE IF NOT EXISTS `profile` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `profile`;
 -- --------------------------------------------------------
 
 --
