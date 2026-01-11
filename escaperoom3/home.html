@@ -4,8 +4,16 @@
     <title>Escape Room Booking</title>
   <link rel="stylesheet" href="style1.css">
 <link type="image/png" sizes="16x16" rel="icon" href="images/icons8-escape-16.png"> 
-
-<style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 80%;
+    height: 80%;
+  }
 
     header {
   background-color: #040f2d73;
@@ -20,6 +28,16 @@
     height: auto;
   }
 }
+.btn--primary{
+  font-size: 22px;
+  padding: 14px 28px;
+   color: white;
+  border-radius: 10px; /* optional */
+}
+btn--primary:hover{
+  background: #d92f26;   /* hover color */
+  color: white;
+}
 </style>
 
 </head>
@@ -29,9 +47,9 @@
       <a class="topbar__logo" href="home.php">Escape Rooms</a>
 
       <div class="topbar__links">
-        <a class="btn" href="login/login.html">Σύνδεση</a>
-        <a class="btn" href="register/register.php">Εγγραφή</a>
-        <a class="btn" href="login/logout.php">Αποσύνδεση</a>
+        <a class="btn" style="background:#ff3b30; color:white;" href="login/login.html">Σύνδεση</a>
+        <a class="btn" style="background:#ff3b30; color:white;" href="register/register.php">Εγγραφή</a>
+        <a class="btn" style="background:#ff3b30; color:white;" href="login/logout.php">Αποσύνδεση</a>
       </div>
     </div>
   </nav>
@@ -44,29 +62,76 @@
         Καλώς ήρθατε! Διαλέξτε ημερομηνία,μάζεψε τους φίλους σου  και ο θεος βοηθός.
       </p>
 <p>Δειτε τα Δωμάτια:</p>
-      <a class="btn btn--primary" href="home.php">Δωμάτια</a>
-      <p class="section-title">Οι προηγούμενοι που το τόλμησαν</p>
+<a class="btn btn-lg" style="background:#ff3b30; color:white;" href="home.php">Δωμάτια</a>
+      <p class="section-title">Οι προηγούμενοι που το τόλμησαν:</p>
 
 <div class="room-grid" role="list">
-  <figure class="room-card" role="listitem">
-    <img class="room-img" src="examples/bank.png" alt="Bank room preview" loading="lazy">
-    <figcaption>Bank room</figcaption>
-  </figure>
+  <div id="demo" class="carousel slide" data-ride="carousel">
 
-  <figure class="room-card" role="listitem">
-    <img class="room-img" src="examples/random.png" alt="Mystery room preview" loading="lazy">
-    <figcaption>Mystery room</figcaption>
-  </figure>
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
 
-  <figure class="room-card" role="listitem">
-    <img class="room-img" src="examples/random2.png" alt="Horror room preview" loading="lazy">
-    <figcaption>Annabel room</figcaption>
-  </figure>
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="examples/bank.png" alt="bank room">
+      <div class="carousel-caption">
+    <h3>bank room</h3>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="examples/random.png" alt="Mystery room">
+      <div class="carousel-caption">
+    <h3>Mystery room</h3>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="examples/random2.png" alt="Annabel room">
+       <div  class="carousel-caption">
+    <h3>Annabel room</h3>
+    <p>Unfortunately  they didnt came out in time</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="examples/lab.png" alt="Lab room">
+       <div class="carousel-caption">
+    <h3>Lab room</h3>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <img src="examples/Bio-Hazard_Ward.png" alt="Bio-Hazard_Ward room">
+       <div class="carousel-caption">
+    <h3>Bio-Hazard_Ward room</h3>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <img src="examples/The_Red_Room.png" alt="The_Red_Room room">
+       <div class="carousel-caption">
+    <h3>The_Red_Room room</h3>
+    </div>
+    </div>
+     <div class="carousel-item">
+      <img src="examples/The_Suture_Ward.png" alt="The_Suture_Ward room">
+       <div class="carousel-caption">
+    <h3>The_Suture_Ward room</h3>
+    </div>
+    </div>
+  </div>
 
-  <figure class="room-card" role="listitem">
-    <img class="room-img" src="examples/lab.png" alt="Lab room preview" loading="lazy">
-    <figcaption>Lab room</figcaption>
-  </figure>
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+  
 </div>
     </div>
   </header>
