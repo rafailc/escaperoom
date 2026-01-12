@@ -24,31 +24,56 @@ $query = "SELECT * FROM users WHERE username='$username'";
         <p>
           <a class="back" href="../../home.html">← Πίσω στην αρχική</a>
 </p>
-         <input type="hidden" name="room" value="<?php echo $room; ?>">
+<input type="hidden" name="room" value="<?php echo $room; ?>">
+<?php if (!empty($result["username"]) ) { ?>
          <input type="hidden" name="username" value="<?php echo $result["username"]?>">
          <input type="hidden" name="firstname" value="<?php echo $result["firstname"]?>">
          <input type="hidden" name="lastname" value="<?php echo $result["lastname"]?>">
          <input type="hidden" name="city" value="<?php echo $result["city"]?>">
+  <?php } else { ?>
+    Escape Rooms
+  <?php } ?>
       <table>
          <tr>
             <th>room:</th>
             <td><?php echo $room; ?></td>
         </tr>
         <tr>
-            <th>Username:</th>
+             <?php if (!empty($result["username"]) ) { ?>
+  <th>Username:</th>
             <td><?php echo $result["username"]?></td>
+            <?php } else { ?>
+              <th>email:</th>
+    <td><input type="text" name="username"/></td>
+  <?php } ?>
+           
         </tr>
         <tr>
             <th>first name:</th>
-            <td><?php echo $result["firstname"]?></td>
+              <?php if (!empty($result["username"]) ) { ?>
+
+                <td><?php echo $result["firstname"]?></td>
+            <?php } else { ?>
+    <td><input type="text" name="firstname"/></td>
+  <?php } ?>
         </tr>
          <tr>
             <th>last name:</th>
-            <td><?php echo $result["lastname"]?></td>
+             <?php if (!empty($result["username"]) ) { ?>
+
+                 <td><?php echo $result["lastname"]?></td>
+            <?php } else { ?>
+    <td><input type="text" name="lastname"/></td>
+  <?php } ?>
         </tr>
         <tr>
             <th>City:</th>
-            <td><?php echo $result["city"]?></td>
+             <?php if (!empty($result["username"]) ) { ?>
+
+                  <td><?php echo $result["city"]?></td>
+            <?php } else { ?>
+    <td><input type="text" name="city"/></td>
+  <?php } ?>
         </tr>
         <tr>
             <th>Date:</th>
